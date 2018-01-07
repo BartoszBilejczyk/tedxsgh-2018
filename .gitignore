@@ -9,6 +9,7 @@
 /tmp
 /doc
 /out-tsc
+/sass/.sass-cache
 
 # dependencies
 /node_modules
