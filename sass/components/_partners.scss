@@ -1,0 +1,60 @@
+.sponsors {
+  position: relative;
+
+  &-wrapper {
+    height: 100%;
+
+    @include md-up {
+      height: 100vh;
+    }
+
+    > .lines {
+      top: 52%;
+      right: 120px;
+      height: 220px;
+      width: 500px;
+    }
+  }
+
+  &-background {
+    background: url('../assets/images/partners-background1.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 250px);
+    position: absolute;
+    top: 150px;
+    width: calc(100% - 300px);
+
+    .lines {
+      bottom: -30px;
+      left: -50px;
+      height: 220px;
+      width: 150px;
+    }
+
+    .red-rectangle {
+      left: 70px;
+      bottom: 140px;
+      height: 140px;
+      width: 110px;
+    }
+  }
+
+  &-list {
+    width: 450px;
+    background: #fff;
+    padding: 30px;
+
+    img {
+      max-width: 100%;
+    }
+
+    @include md-up {
+      position: absolute;
+      right: 140px;
+      top: 50%;
+      transform: translateY(-50%)
+    }
+  }
+}
