@@ -1,0 +1,63 @@
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  @include font(12, bold);
+  text-transform: uppercase;
+  color: #121f3e;
+}
+
+input, textarea {
+  padding: 20px;
+  //min-width: 250px;
+  width: calc(100% - 80px);
+  outline: none;
+  @include font(12, bold);
+  text-transform: uppercase;
+  color: #121f3e;
+  border: none;
+  box-shadow: 0 52px 114px 0 rgba(38, 58, 124, 0.05);
+  margin: 15px 0 15px 10px;
+
+  @include sm-up {
+    min-width: 250px;
+  }
+}
+
+textarea {
+  height: 120px;
+}
+
+.lines {
+  position: absolute;
+  background: repeating-linear-gradient(
+    -45deg,
+    #ddd,
+    #ddd 2px,
+    transparent 2px,
+    transparent 8px
+  );
+
+  &--dark {
+    background: repeating-linear-gradient(
+        -45deg,
+        #333,
+        #333 2px,
+        transparent 2px,
+        transparent 8px
+    );
+  }
+}
+
+.red-rectangle {
+  background: $red;
+  position: absolute;
+}
+
+.flag {
+  margin-left: 5px;
+  opacity: 0.3;
+  width: 25px;
+
+  &--active {
+    opacity: 1;
+  }
+}

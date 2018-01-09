@@ -1,0 +1,64 @@
+.btn {
+  padding: 20px 30px;
+  height: 52px;
+  text-align: center;
+  background-color: $red;
+  border-radius: 2px;
+  color: #fff;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+  @include font(12, semi);
+  text-transform: uppercase;
+  min-width: 140px;
+
+  &:hover {
+    background-color: darken($red, 1.5);
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+    max-width: none;
+  }
+
+  &--with-arrow {
+    position: relative;
+    padding: 20px 50px 20px 30px;
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: url('../assets/images/arrow-white.svg');
+      width: 20px;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      //
+      //&:hover {
+      //  animation: moveArrow .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+      //}
+    }
+  }
+}
+
+//
+//@keyframes moveArrow {
+//  0% {
+//    right: 20px;
+//  }
+//  30% {
+//    right: 10px;
+//  }
+//  60% {
+//    right: 20px;
+//  }
+//  100% {
+//    right: 10px;
+//  }
+//}

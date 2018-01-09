@@ -1,0 +1,68 @@
+#map {
+  height: 300px;
+
+  @include lg-up {
+    height: calc(100% - 200px);
+  }
+}
+
+.contact {
+  margin: 30px 0;
+
+  @include md-up {
+    margin: 50px 0;
+  }
+
+  @include xl-up {
+    margin: 100px 0;
+  }
+
+  &-wrapper {
+    margin: 50px 0;
+  }
+
+  &-newsletter-input-wrapper {
+    margin: 50px 0;
+  }
+
+  &-form-wrapper {
+    margin-top: 60px;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      max-width: 250px;
+      margin-top: 15px;
+    }
+  }
+
+  &-transport {
+    margin: 30px 0;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+
+  &--flex {
+    display: flex;
+
+    input {
+      width: 70%;
+    }
+
+    button {
+      margin-top: 15px;
+    }
+  }
+
+  .lines {
+    height: 20px;
+    width: calc(100% - 35px);
+    bottom: 10px;
+    z-index: -1;
+  }
+}

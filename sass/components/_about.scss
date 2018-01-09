@@ -1,0 +1,72 @@
+.about {
+  margin: 30px 0;
+  position: relative;
+
+  @include md-up {
+    margin: 100px 0;
+  }
+  @include xl-up {
+    margin: 150px 0;
+  }
+
+  .lines {
+    top: -100px;
+    left: 0px;
+    height: 350px;
+    width: 60px;
+  }
+
+  &__current-edition {
+    position: relative;
+    margin: 80px 0 40px;
+
+    &-theme {
+      position: absolute;
+      top: 50px;
+      left: -5px;
+      color: rgba(0, 0, 0, 0.06);
+      @include font(40, semi);
+
+      @include sm-up {
+        top: 90px;
+        @include font(60, semi);
+      }
+
+      @include md-up {
+        @include font(80, semi);
+      }
+
+      @include lg-up {
+        left: 430px;
+        top: -6px;
+        @include font(95, semi);
+      }
+
+      &-description {
+        margin-top: 40px;
+
+        @include sm-up {
+          margin-top: 80px;
+        }
+
+        @include lg-up {
+          margin: 0;
+          width: 75%;
+        }
+      }
+    }
+
+    img {
+      width: 200px;
+      margin-bottom: 30px;
+
+      @include sm-up {
+        width: 300px;
+      }
+
+      @include md-up {
+        width: 400px;
+      }
+    }
+  }
+}

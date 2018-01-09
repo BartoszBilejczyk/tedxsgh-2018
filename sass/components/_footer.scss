@@ -1,0 +1,55 @@
+.footer {
+  padding: 10px;
+
+  @include md-up {
+    padding: 30px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    @include md-up {
+      flex-direction: row;
+    }
+
+    span {
+      display: block;
+      margin: 15px;
+      text-align: center;
+
+      @include md-up {
+        margin: 8px;
+      }
+
+      a {
+        color: #000;
+      }
+    }
+
+    &__social-media {
+      order: 1;
+
+      @include md-up {
+        order: 2
+      }
+
+      &-item {
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
+
+  &-copyrights {
+    order: 2;
+
+    @include md-up {
+      order: 1;
+      display: flex;
+    }
+  }
+}

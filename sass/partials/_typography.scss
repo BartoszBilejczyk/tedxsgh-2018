@@ -1,0 +1,58 @@
+html, body {
+  @include font-weight(normal);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0;
+}
+
+p {
+  @include font(14);
+}
+
+.ted-heading {
+  @include font-weight(bold);
+  color: #000;
+
+  &--hero {
+    @include font-size(33);
+    line-height: 1.27;
+    letter-spacing: 2px;
+    margin: 30px 0;
+
+    @include md-up {
+      @include font-size(60);
+    }
+  }
+
+  &--primary {
+    @include font-size(20);
+    line-height: 1.20;
+  }
+
+  &--secondary {
+    @include font-size(13);
+    text-transform: uppercase;
+  }
+}
+
+.ted-copy {
+  @include font(14);
+  color: #818BA2;
+  line-height: 1.5;
+
+  &--large {
+    @include font(16, bold);
+    color: #000;
+  }
+
+  &--faded {
+    opacity: 0.6;
+  }
+}
+
+.ted-red {
+  color: $red;
+}
+
+
