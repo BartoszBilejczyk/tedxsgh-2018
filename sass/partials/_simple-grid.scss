@@ -69,6 +69,70 @@ $breakpoint-xlarge: 1700px;
     padding-left: 0;
   }
 }
+
+.col {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.col.reverse {
+  flex-direction: column-reverse;
+}
+
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+.justify-start {
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.justify-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex-first {
+  order: -1;
+}
+
+.flex-last {
+  order: 1;
+}
+
+
 .col-xs-1 { width:($width / 12) - ($gutter * 11 / 12); }
 .col-xs-2 { width: ($width / 6) - ($gutter * 10 / 12); }
 .col-xs-3 { width: ($width / 4) - ($gutter * 9 / 12); }

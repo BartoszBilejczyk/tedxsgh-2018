@@ -4,17 +4,23 @@
   top: 0;
   padding: 20px 0;
   width: 100vw;
+  background: #fff;
+
+  @include md-up {
+    background: transparent;
+    margin-top: 10px;
+  }
 
   &-content {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .brand-logo {
     height: auto;
-    max-width: 160px;
+    max-width: 140px;
     margin-right: 25px;
 
     @include sm-up {
@@ -26,14 +32,27 @@
     }
   }
 
+  .nav-logo-languages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   &-items {
     display: none;
-    @include font(15, medium);
+    @include font(12, medium);
     list-style-type: none;
     align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
 
     @include lg-up {
       display: flex;
+    }
+
+    @include xl-up {
+      @include font(14, medium);
     }
   }
 
@@ -56,7 +75,11 @@
 }
 
 .container-fluid {
-  padding: 0 30px;
+  padding: 0 15px;
+
+  @include md-up {
+    padding: 0 30px;
+  }
 }
 
 
@@ -99,6 +122,10 @@
   cursor: pointer;
   z-index: 1002;
   display: none;
+
+  @include md-up {
+    top: 45px;
+  }
 
   @include lg-down-without-lg {
     display: block;

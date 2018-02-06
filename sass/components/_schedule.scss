@@ -74,11 +74,12 @@
 
   .speaker {
     &-box {
-      padding: 20px 50px 40px;
+      padding: 30px 50px;
       background: #fff;
       box-shadow: 0 52px 114px 0 rgba(38,58,124,0.05);
       text-align: center;
       position: relative;
+      min-height: 275px;
 
       &-wrapper {
         position: relative;
