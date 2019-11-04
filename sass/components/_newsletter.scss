@@ -1,0 +1,236 @@
+.newsletter {
+  height: 100%;
+  min-height: 100vh;
+  width: 100vw;
+  background: url('../assets/images/background-newsletter.jpg'), #000;
+  background-position: center bottom;
+  background-size: cover;
+
+  @include md-up {
+    height: 100vh;
+  }
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 150px;
+    }
+  }
+}
+
+.newsletter-page-signup-wrapper {
+  min-width: 300px;
+  padding-bottom: 80px;
+  padding-top: 60px;
+
+  @include sm-up {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  @include xl-up {
+    top: 40%;
+  }
+
+  .ted-heading--hero {
+    @include font(25, bold);
+
+    @include sm-up {
+      @include font(35, bold);
+    }
+
+    @include xl-up {
+      @include font(45, bold);
+    }
+  }
+
+  @include sm-up {
+    min-width: 400px;
+  }
+
+  @include sm-up {
+    min-width: 500px;
+  }
+
+  input {
+    margin: 0 0 20px;
+    width: calc(100% - 40px);
+
+    @include md-up {
+      width: 360px;
+    }
+
+    @include lg-up {
+      width: calc(100% - 40px);
+    }
+  }
+
+  button {
+    width: 100%;
+    margin: 0;
+
+    @include md-up {
+      width: 400px;
+    }
+
+    @include lg-up {
+      width: 100%;
+    }
+  }
+
+  .errors {
+    margin: 0;
+    padding: 0;
+
+    input, select, input[type="checkbox"], input[type="radio"] {
+      -webkit-border-radius:0;
+      -webkit-appearance:none;
+      outline:none;
+    }
+
+    li {
+      margin-bottom:15px;
+      padding-left:30px;
+      position:relative;
+      list-style-type: none;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"],
+    li label::before {
+      cursor:pointer;
+      height:15px;
+      left:0;
+      margin-top:-15px;
+      position:absolute;
+      width:14px;
+      top:50%;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      display:inline-block;
+      opacity:0;
+      vertical-align:middle;
+    }
+
+    li label::before {
+      border:2px solid white;
+      border-radius:4px;
+      color: white;
+      content:'';
+      font-size:0.88em;
+      padding:.1em 0 0 .2em;
+    }
+
+    li input.error + label::before {
+      border-color:#f93337;
+    }
+
+    li input[type="checkbox"]:checked + label::before {
+      border-color: white;
+      content:'\2714';
+    }
+
+    li input[type="radio"] + label::before {
+      border-radius:50%;
+    }
+
+    li input[type="radio"]:checked + label::before {
+      border-color: white;
+      content:'\25CF';
+      font-size:0.7em;
+      padding:0 0 0 .3em;
+    }
+
+    input[type="submit"] {
+      background:#37BC9B;
+      border:none;
+      color:darken(#37BC9B, 30%);
+      cursor:pointer;
+      font-family:"AvenirNextLTW01-DemiCn", sans-serif;
+      font-size:1.4em;
+      padding:.5em;
+      width:100%;
+      &:hover,
+      &:focus {
+        background:darken(#37BC9B, 5%);
+      }
+    }
+
+    label {
+      display:block;
+      margin-bottom:6px;
+      width:100%;
+    }
+
+    ul {
+      margin-bottom:1em;
+      padding-top:1em;
+      overflow:hidden;
+    }
+
+    li label {
+      display:inline-block;
+      vertical-align:top;
+    }
+
+    ul.error input[type="checkbox"] + label::before,
+    ul.error input[type="radio"] + label::before {
+      border-color:#F93337;
+    }
+
+    ul.error input[type="checkbox"] + label,
+    ul.error input[type="radio"] + label {
+      color:#F93337;
+    }
+
+    li {
+      float:left;
+      &:first-of-type {
+        margin-right:2%;
+      }
+      @media screen and (max-width:460px) {
+        width:100%;
+        &:first-of-type {
+          margin-right:0;
+          width:100%;
+        }
+      }
+    }
+
+    li.error {
+      padding-left: 0;
+      color: white;
+      width:100%;
+      display: block;
+    }
+
+    //label.error {
+    //  display: none !important;
+    //}
+  }
+}
+
+.js-errors {
+  display: none !important;
+
+  li {
+    display: none !important;
+  }
+}
+
+.back {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+

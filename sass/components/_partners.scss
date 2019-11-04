@@ -23,14 +23,14 @@
   }
 
   &-background {
-    height: calc(100vh - 250px);
+    height: calc(100vh - 200px);
     position: absolute;
     top: 150px;
-    width: calc(100% - 300px);
+    width: calc(100% - 450px);
 
     @include md-up {
       background: url('../assets/images/partners-background1.jpg');
-      background-position: center center;
+      background-position: 80% 50%;
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -64,40 +64,93 @@
     background: #fff;
     box-shadow: 0 52px 114px 0 rgba(38,58,124,0.05);
     padding: 10px;
+    flex-direction: column;
+    margin-top: 20px;
 
     @include sm-up {
-      width: 450px;
+      width: 520px;
       background: #fff;
       padding: 30px;
-    }
-
-    img {
-      max-width: 100%;
-      max-height: 150px;
+      flex-direction: row;
+      margin-top: 0;
     }
 
     @include md-up {
       position: absolute;
       right: 140px;
-      top: 50%;
+      top: 56%;
       transform: translateY(-50%)
+    }
+
+    @include lg-up {
+      width: 880px;
+    }
+  }
+}
+
+.sponsor {
+  width: 100%;
+  margin: 10px 0;
+
+  @include sm-up {
+    &:nth-of-type(1) {
+      width: 35%;
+    }
+    &:nth-of-type(2) {
+      width: 65%;
     }
   }
 }
 
 .other-sponsors {
-  margin-top: 50px;
+  margin-top: 20px;
+}
 
-  .sponsor {
-    width: calc(50% - 35px);
-    margin: 15px 15px 15px 0;
+.normal-sponsor-logo {
+  max-width: 85px !important;
+  padding: 20px 15px;
+  max-height: 60px !important;
+}
 
-    @include sm-up {
-      width: calc(33% - 35px);
-    }
+.other-sponsor {
+  width: calc(50% - 35px);
+  margin: 15px 15px 15px 0;
+  padding: 10px;
+
+  img {
+    max-height: 50px;
+  }
+
+  @include sm-up {
+    width: 70px;
   }
 }
 
 a.mail {
   color: black !important;
+}
+
+.sponsors__list {
+  display: flex;
+  flex-direction: column;
+
+  .eurocash img {
+    max-height: 100px;
+    max-width: 300px;
+    margin-bottom: 40px;
+
+    @include md-up {
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
+  }
+
+  .costa img {
+    max-height: 100px;
+    max-width: 200px;
+  }
+
+  @include md-up {
+    flex-direction: row;
+  }
 }

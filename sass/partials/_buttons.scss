@@ -5,15 +5,20 @@
   background-color: $red;
   border-radius: 2px;
   color: #fff;
-  border: none;
-  transition: 0.2s;
+  border: 1px solid $red;
+  transition: 0.1s;
   cursor: pointer;
   @include font(12, semi);
   text-transform: uppercase;
   min-width: 140px;
+  margin: 10px;
+
+  @include sm-up {
+    margin: 0 10px 0 0;
+  }
 
   &:hover {
-    background-color: darken($red, 1.5);
+    background-color: darken($red, 2);
   }
 
   &:focus,
@@ -43,6 +48,18 @@
       //&:hover {
       //  animation: moveArrow .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
       //}
+    }
+  }
+
+  &--outline {
+    border: 1px solid black;
+    background: white;
+    color: black;
+
+    &:hover {
+      color: white;
+      background: $red;
+      border: 1px solid $red;
     }
   }
 }

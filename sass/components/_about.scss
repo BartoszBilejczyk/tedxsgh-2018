@@ -6,7 +6,7 @@
     margin: 100px 0;
   }
   @include xl-up {
-    margin: 150px 0;
+    margin: 150px 0 100px;
   }
 
   .lines {
@@ -24,7 +24,7 @@
       position: absolute;
       top: 50px;
       left: -5px;
-      color: rgba(0, 0, 0, 0.06);
+      color: rgba(0, 0, 0, 0.10);
       @include font(40, semi);
 
       @include sm-up {
