@@ -23,6 +23,11 @@ p {
     @include md-up {
       @include font-size(60);
     }
+
+    &--small {
+      @include font-size(18);
+      text-transform: uppercase;
+    }
   }
 
   &--primary {

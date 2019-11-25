@@ -297,16 +297,17 @@
     }
 
     a.href-button {
-      border: none
+      border: none;
+
+      .btn {
+        font-size: 18px;
+        height: 64px;
+      }
     }
   }
 
   &-date {
     display: block;
-
-    @include sm-up {
-      margin-left: 10px;
-      display: inline-block;
-    }
+    margin-top: 10px;
   }
 }

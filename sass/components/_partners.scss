@@ -91,15 +91,6 @@
 .sponsor {
   width: 100%;
   margin: 10px 0;
-
-  @include sm-up {
-    &:nth-of-type(1) {
-      width: 35%;
-    }
-    &:nth-of-type(2) {
-      width: 65%;
-    }
-  }
 }
 
 .other-sponsors {
@@ -132,25 +123,17 @@ a.mail {
 
 .sponsors__list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   .eurocash img {
     max-height: 100px;
     max-width: 300px;
-    margin-bottom: 40px;
-
-    @include md-up {
-      margin-right: 50px;
-      margin-bottom: 0;
-    }
   }
 
-  .costa img {
+  img {
     max-height: 100px;
     max-width: 200px;
-  }
-
-  @include md-up {
-    flex-direction: row;
+    margin: 30px;
   }
 }

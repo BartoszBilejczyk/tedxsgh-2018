@@ -469,6 +469,10 @@ p {
       .ted-heading--hero {
         font-size: 60px;
         font-size: 3.75rem; } }
+    .ted-heading--hero--small {
+      font-size: 18px;
+      font-size: 1.125rem;
+      text-transform: uppercase; }
   .ted-heading--primary {
     font-size: 20px;
     font-size: 1.25rem;
@@ -607,7 +611,8 @@ p {
     @media only screen and (min-width: 750px) {
       .footer-copyrights {
         order: 1;
-        display: flex; } }
+        display: flex;
+        align-items: center; } }
 
 .ticket-reminder {
   display: flex;
@@ -848,12 +853,12 @@ p {
     border-bottom: 1px solid red; }
   .header .hero a.href-button {
     border: none; }
+    .header .hero a.href-button .btn {
+      font-size: 18px;
+      height: 64px; }
   .header-date {
-    display: block; }
-    @media only screen and (min-width: 540px) {
-      .header-date {
-        margin-left: 10px;
-        display: inline-block; } }
+    display: block;
+    margin-top: 10px; }
 
 #map {
   height: 300px; }
@@ -1089,11 +1094,6 @@ p {
 .sponsor {
   width: 100%;
   margin: 10px 0; }
-  @media only screen and (min-width: 540px) {
-    .sponsor:nth-of-type(1) {
-      width: 35%; }
-    .sponsor:nth-of-type(2) {
-      width: 65%; } }
 
 .other-sponsors {
   margin-top: 20px; }
@@ -1118,21 +1118,15 @@ a.mail {
 
 .sponsors__list {
   display: flex;
-  flex-direction: column; }
+  flex-direction: row;
+  flex-wrap: wrap; }
   .sponsors__list .eurocash img {
     max-height: 100px;
-    max-width: 300px;
-    margin-bottom: 40px; }
-    @media only screen and (min-width: 750px) {
-      .sponsors__list .eurocash img {
-        margin-right: 50px;
-        margin-bottom: 0; } }
-  .sponsors__list .costa img {
+    max-width: 300px; }
+  .sponsors__list img {
     max-height: 100px;
-    max-width: 200px; }
-  @media only screen and (min-width: 750px) {
-    .sponsors__list {
-      flex-direction: row; } }
+    max-width: 200px;
+    margin: 30px; }
 
 .newsletter {
   height: 100%;
